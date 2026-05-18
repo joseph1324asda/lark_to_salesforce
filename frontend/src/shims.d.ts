@@ -1,0 +1,8 @@
+declare module 'react' { export type ReactNode = unknown; export function useState<T>(initial: T): [T, (value: T | ((prev: T) => T)) => void]; export function useState<T = undefined>(): [T | undefined, (value: T | undefined | ((prev: T | undefined) => T | undefined)) => void]; export function useEffect(fn: () => void | (() => void), deps?: unknown[]): void; const React: { StrictMode: any }; export default React; }
+declare module 'react/jsx-runtime' { export const jsx: any; export const jsxs: any; export const Fragment: any; }
+declare module 'react-dom/client' { const ReactDOM: { createRoot(el: Element): { render(node: unknown): void } }; export default ReactDOM; }
+declare module 'antd' { export const Button: any; export const Card: any; export const Col: any; export const Form: any; export const Input: any; export const Layout: any; export const Menu: any; export const message: any; export const Modal: any; export const Row: any; export const Space: any; export const Statistic: any; export const Switch: any; export const Table: any; export const Tag: any; export const Typography: any; }
+declare module 'antd/dist/reset.css';
+declare module 'axios' { interface Response<T> { data: T } interface Instance { get<T = any>(url: string): Promise<Response<T>>; post<T = any>(url: string, data?: unknown): Promise<Response<T>>; put<T = any>(url: string, data?: unknown): Promise<Response<T>>; } const axios: Instance & { create(config?: unknown): Instance }; export default axios; }
+interface ImportMeta { env: Record<string, string | undefined> }
+declare namespace JSX { interface IntrinsicElements { [elemName: string]: any } }
